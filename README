@@ -1,0 +1,41 @@
+Requires Mac OS X 10.6 or later
+
+This tool sets the display resolution.  This tool exists so that we
+can set the display to a setting when the display manager says it can't,
+mainly, when a Mac starts up and the monitor is off, or if the Mac is on
+a KVM.
+
+Copyright (c) 2014 The University of Utah
+All Rights Reserved.
+
+Permission to use, copy, modify, and distribute this software and
+its documentation for any purpose and without fee is hereby granted,
+provided that the above copyright notice appears in all copies and
+that both that copyright notice and this permission notice appear
+in supporting documentation, and that the name of The University
+of Utah not be used in advertising or publicity pertaining to
+distribution of the software without specific, written prior
+permission. This software is supplied as is without expressed or
+implied warranties of any kind.
+
+USAGE:
+You can give it arguments or not.  If you don't give it arguments, it will use:
+
+1024 x 768, 32 bits per pixel, and 75 htz
+
+If you give it 4 arguments, they should be: width, height, bits per pixel, and refresh rate.
+
+Like so:
+
+SetDisplay 1024 768 32 75
+
+WARNING:
+In testing garbage values, I did get this to tool to change the display so that absolutely
+nothing displayed.  I don't remember what I did to get that.  And I can't duplicate it anymore.
+I could remotely control it, so I could fix it.  But beware, if you can't remotely control the
+machine and fix bad display settings, well, you might have to resort to drastic measures to fix
+a mac with bad display settings (like boot off of a different disk and delete the display
+preferences.
+
+In other words, this tool will change the display settings regardless of what the display
+manager says is possible.  So be careful!!!
